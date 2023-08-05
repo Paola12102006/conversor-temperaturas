@@ -1,0 +1,258 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(#f1552e80, #2e93f180);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.dark {
+    color: #ddd;
+    background: linear-gradient(#801b02, #073f74);
+}
+
+body.dark::-webkit-scrollbar {
+    background: linear-gradient(#801b02, #073f74);
+}
+
+body::before {
+    content: '';
+    background-image: url(../imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+body.dark::before {
+    opacity: 0.1;
+}
+
+.head {
+    text-align: center;
+    padding: 20px;
+    transition: .3s ease;
+}
+
+.head h1 {
+    font-size: 50px;
+    font-weight: 700;
+    /* background: linear-gradient(to bottom, #e55125, #2e7fcc); */
+    background: linear-gradient(to bottom, #bd350c, #1066b6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+body.dark .head h1 {
+    background: linear-gradient(#fc8d71, #9dd0ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.head span {
+    font-size: 1.2em;
+}
+
+.head .btn-tema {
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.main {
+    background: linear-gradient(#ec8268bb, #8fc3f3bd);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    display: flex;
+    width: 95%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body.dark .main {
+    background: linear-gradient(#801b02c2, #073f74c5);
+}
+
+.main .img-termometro {
+    height: 200px;
+}
+
+.main .section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 100px;
+    padding: 50px 10px 30px;
+}
+
+.main .section .containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main .section .containers label {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main .section .containers label input {
+    width: 70px;
+    padding: 5px;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #eee;
+}
+
+body.dark .main .section .containers label input {
+    background-color: #130000;
+    color: #eee;
+}
+
+.main .section .containers .btns {
+    width: 110px;
+    margin: 0 10px;
+    padding: 10px 0 6px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #f7c8b5;
+    box-shadow: 4px 3px 6px #6e20019c;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+body.dark .main .section .containers .btns {
+    background-color: #531304;
+    box-shadow: 4px 3px 6px #5301019c;
+    color: #eee;
+}
+
+.main .section .containers .btns:hover {
+    transform: scale(1.1);
+    background-color: #9ccefd;
+    box-shadow: 2px 2px 6px #014b6e9c;
+}
+
+body.dark .main .section .containers .btns:hover {
+    background-color: #00274b;
+    box-shadow: 2px 2px 6px #010f3bde;
+}
+
+.main .section .containers .box-resultado {
+    width: 100%;
+    font-size: 17px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .6s ease;
+}
+
+.main .section .containers .box-resultado.resultado-reveal-quente {
+    transform: scale(1);
+    background-color: #f3ad9c;
+    box-shadow: 8px 8px #e99a87;
+}
+
+body.dark .main .section .containers .box-resultado.resultado-reveal-quente {
+    background-color: #4b0c01;
+    box-shadow: 8px 8px #2b0900;
+}
+
+.main .section .containers .box-resultado.resultado-reveal-frio {
+    transform: scale(1);
+    background-color: #a4cbf8;
+    box-shadow: 8px 8px #78b7ff;
+}
+
+body.dark .main .section .containers .box-resultado.resultado-reveal-frio {
+    background-color: #092a50;
+    box-shadow: 8px 8px #01162e;
+}
+
+footer {
+    background-color: #8fc3f396;
+    width: 100%;
+    padding: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    color: #333333d5;
+    margin-top: 100px;
+    text-align: center;
+}
+
+body.dark footer {
+    background-color: #062a589a;
+    color: #ddd;
+}
+
+footer ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #8b2a03ab;
+    transition: .4s ease;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #8b1303;
+}
+
+body.dark footer ul li a {
+    color: #fac6b17c;
+}
+
+body.dark footer ul li a:hover {
+    color: #f5c5b3;
+}
+
+@media (max-width: 1120px) {
+    body::before {
+        background-image: url(../imgs/bg-responsive.png);
+    }
+
+    .head .btn-tema {
+        right: 20px;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .main .img-termometro {
+        display: none;
+    }
+
+    .main .section {
+        padding: 30px 0;
+    }
+
+}

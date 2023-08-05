@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;700&display=swap');
+
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}    
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: linear-gradient(#f1552e80, #2e93f180);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#e55125, #2e7fcc);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./src/imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/index.css">
+
+    <script defer src="./src/js/index.js"></script>
+
+    <title>Conversor de Temperaturas</title>
+</head>
+<body>
+
+    <header class="head">
+        <h1>Conversor de Temperaturas</h1>
+        <span>Converta temperaturas em Celsius, Fahrenheit e Kelvin</span>
+
+        <button class="btn-tema" onclick="mudarTema()">
+            <img src="./src/imgs/sun.png" alt="Imagem do Sol." class="img-tema">
+        </button>
+    </header>
+    
+    <main class="main">
+
+        <img src="./src/imgs/frio.png" alt="Imagem de um Termometro Frio." class="img-termometro">
+
+        <section class="section">
+
+            <div class="containers">
+                <label for="inp-celsius">Temperatura em Celsius
+                    <input type="number" name="inp-celsius" id="input-celsius">
+                </label>
+
+                <div class="box-btns">
+                    <button class="btns" onclick="converterC_F()">Fahrenheit</button>
+                    <button class="btns" onclick="converterC_K()">Kelvin</button>
+                </div>
+
+                <p class="box-resultado celsius-resultado">Essa temperatura em Fahrenheit/Kelvin é:<br>00.0 °F/°K</p>
+            </div>
+
+            <div class="containers">
+                <label for="inp-kelvin">Temperatura em Kelvin
+                    <input type="number" name="inp-kelvin" id="input-kelvin">
+                </label>
+
+                <div class="box-btns">
+                    <button class="btns" onclick="converterK_C()">Celsius</button>
+                    <button class="btns" onclick="converterK_F()">Fahrenheit</button>
+                </div>
+
+                <p class="box-resultado kelvin-resultado">Essa temperatura em Celcius/Fahrenheit é:<br>00.0 °C/°F</p>
+            </div>
+
+            <div class="containers">
+                <label for="inp-fahrenheit">Temperatura em Fahrenheit
+                    <input type="number" name="inp-fahrenheit" id="input-fahrenheit">
+                </label>
+
+                <div class="box-btns">
+                    <button class="btns" onclick="converterF_K()">Kelvin</button>
+                    <button class="btns" onclick="converterF_C()">Celsius</button>
+                </div>
+
+                <p class="box-resultado fahrenheit-resultado">Essa temperatura em Kelvin/Celsius é:<br>00.0 °K/°C</p>
+            </div>
+
+        </section>
+
+        <img src="./src/imgs/quente.png" alt="Imagem de um Termometro Quente." class="img-termometro">
+
+    </main>
+
+    <footer>
+        <div>
+            <h3>Attributions</h3>
+            <ul>
+                <!-- <li><a href="https://www.flaticon.com/br/icones-gratis/quente" title="quente ícones">Quente ícones criados por Freepik - Flaticon</a></li>
+                <li><a href="https://www.flaticon.com/br/icones-gratis/frio" title="frio ícones">Frio ícones criados por Freepik - Flaticon</a></li> -->
+
+                <li><a href="https://www.flaticon.com/free-icons/hot-temperature" title="hot-temperature icons">Hot-temperature icons created by Freepik - Flaticon</a></li>
+                <li><a href="https://www.flaticon.com/free-icons/low-temperature" title="low temperature icons">Low temperature icons created by Freepik - Flaticon</a></li>
+            </ul>
+        </div>
+
+        <span>Desenvolvedora da página: Paola da Costa Damasceno</span>
+    </footer>
+</body>
+</html>
